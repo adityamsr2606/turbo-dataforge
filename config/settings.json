@@ -1,0 +1,13 @@
+{
+    "raw_folder": "data/raw_data",
+    "clean_folder": "data/cleaned_data",
+
+    "data_sheet": "Data",
+    "mbr_sheet": "MBR",
+    "gearbox_sheet": "GEARBOX",
+   
+  "column_mapping": {
+    "Desc": "Description",
+    "Qty": "Sales Qty"
+  }
+}
