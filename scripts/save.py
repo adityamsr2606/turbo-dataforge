@@ -16,9 +16,11 @@ def save_csv(folder_name, generic_df, gearbox_df, clean_folder):
     # Save Generic Data
     if generic_df is not None:
 
+        generic_filename = f"{folder_name}_Data.csv"
+
         generic_path = os.path.join(
             output_folder,
-            "Data.csv"
+            generic_filename
         )
 
         generic_df.to_csv(
@@ -29,9 +31,11 @@ def save_csv(folder_name, generic_df, gearbox_df, clean_folder):
     # Save Gearbox
     if gearbox_df is not None:
 
+        gearbox_filename = f"{folder_name}_GEARBOX.csv"
+
         gearbox_path = os.path.join(
             output_folder,
-            "GEARBOX.csv"
+            gearbox_filename
         )
 
         gearbox_df.to_csv(
