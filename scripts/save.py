@@ -1,4 +1,35 @@
 import os
+import pandas as pd
+
+
+def clean_product_code(df):
+
+    if df is None:
+        return df
+
+    possible_columns = [
+        "Product Code",
+        "Product_Code",
+        "ProductCode",
+        "Code",
+        "SKU"
+    ]
+
+    for column in possible_columns:
+
+        if column in df.columns:
+
+            df[column] = (
+                df[column]
+                .astype(str)
+                .str.replace('"', '', regex=False)
+                .str.replace("'", "", regex=False)
+                .str.replace("\n", "", regex=False)
+                .str.replace("\r", "", regex=False)
+                .str.strip()
+            )
+
+    return df
 
 
 def save_csv(folder_name, generic_df, gearbox_df, clean_folder):
@@ -16,6 +47,8 @@ def save_csv(folder_name, generic_df, gearbox_df, clean_folder):
     # Save Generic Data
     if generic_df is not None:
 
+        generic_df = clean_product_code(generic_df)
+
         generic_filename = f"{folder_name}_Data.csv"
 
         generic_path = os.path.join(
@@ -30,6 +63,8 @@ def save_csv(folder_name, generic_df, gearbox_df, clean_folder):
 
     # Save Gearbox
     if gearbox_df is not None:
+
+        gearbox_df = clean_product_code(gearbox_df)
 
         gearbox_filename = f"{folder_name}_GEARBOX.csv"
 

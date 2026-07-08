@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def extract_sheets(excel_path, data_sheet, mbr_sheet, gearbox_sheet):
 
     excel = pd.ExcelFile(excel_path)
@@ -9,7 +8,7 @@ def extract_sheets(excel_path, data_sheet, mbr_sheet, gearbox_sheet):
     mbr_df = None
     gearbox_df = None
 
-    # Read Data sheet
+    # Read DATA sheet
     if data_sheet in excel.sheet_names:
         data_df = pd.read_excel(
             excel_path,
