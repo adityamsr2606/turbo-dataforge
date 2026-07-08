@@ -35,16 +35,6 @@ Analytics & Reporting
 
 ---
 
-# Turbo DataForge
-
-Turbo DataForge is a collaborative Python-based ETL (Extract, Transform, Load) pipeline designed to automate the extraction, transformation, and loading of business datasets from Excel workbooks into PostgreSQL.
-
-The pipeline processes multiple Excel workbooks, converts them into standardized CSV files, performs data cleaning and transformation, and loads the processed datasets into PostgreSQL for centralized storage and analysis.
-
-The project follows a modular ETL architecture that separates extraction, transformation, storage, and database loading, making it scalable, maintainable, and suitable for real-world data engineering workflows.
-
----
-
 # Project Overview
 
 Turbo DataForge processes multiple business datasets stored in Excel workbooks and automatically loads them into PostgreSQL.
