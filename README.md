@@ -555,7 +555,7 @@ The implementation focuses on modular software design, automated data processing
 
 # License
 
-This project is intended for educational, academic, and portfolio purposes.
+This project is intended for educational and portfolio purposes.
 
 The datasets used in this repository remain the property of their respective owners and are used solely for demonstrating ETL concepts and data engineering workflows.
 
